@@ -1,0 +1,10 @@
+{
+  "name": "MoggerBot 3000",
+  "description": "Una Inteligencia Artificial ultra-obsesionada con la cultura del looksmaxing, la blackpill y la estética milimétrica para escanear y calificar tus rasgos faciales con humor y memes.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-serif: "Playfair Display", Georgia, serif;
+
+  /* Sophisticated Dark Color Palette */
+  --color-mog-black: #050505;
+  --color-mog-dark: #111111;
+  --color-mog-slate: #1a1a1a;
+  --color-mog-red: #ff3e3e;
+  --color-mog-gray-light: #e0e0e0;
+  
+  --color-mog-neon-cyan: #ff3e3e; /* Map cyan actions to the theme's gorgeous red */
+  --color-mog-neon-green: #39ff14;
+  --color-mog-neon-pink: #ff3e3e;
+  --color-mog-neon-yellow: #fff01f;
+
+  --animate-scan: scan 2.5s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2s infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-grid: grid-move 20s linear infinite;
+
+  @keyframes scan {
+    0%, 100% {
+      top: 0%;
+      opacity: 0.8;
+    }
+    50% {
+      top: 100%;
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 10px rgba(255, 62, 62, 0.4), 0 0 20px rgba(255, 62, 62, 0.1);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(255, 62, 62, 0.8), 0 0 35px rgba(255, 62, 62, 0.3);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes grid-move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 40px;
+    }
+  }
+}
+
+/* Sophisticated Dark grid pattern */
+.mog-grid-bg {
+  background-image: linear-gradient(rgba(255, 62, 62, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 62, 62, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+body {
+  background-color: var(--color-mog-black);
+  color: var(--color-mog-gray-light);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar styling in tune with the dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-mog-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-mog-slate);
+  border-radius: 3px;
+  border: 1px solid #333;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-mog-red);
+}
+
+/* Custom styling for small percentage elements from AI */
+p small {
+  display: inline-block;
+  font-family: var(--font-mono);
+  color: #ff3e3e;
+  font-weight: 700;
+  font-size: 11px;
+  background-color: rgba(255, 62, 62, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 62, 62, 0.2);
+  margin-top: 6px;
+}
+
